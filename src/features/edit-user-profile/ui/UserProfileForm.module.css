@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  /* На телефоне кнопки на всю ширину — в них проще попасть пальцем */
+  .actions > * {
+    flex: 1 1 100%;
+  }
+}

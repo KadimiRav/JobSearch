@@ -1,0 +1,39 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px 16px 48px;
+  text-align: center;
+}
+
+.page h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: clamp(24px, 4vw, 40px);
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Вложенные блоки (форма, таблица) выравнивают текст сами */
+.section > :not(h2) {
+  text-align: left;
+}

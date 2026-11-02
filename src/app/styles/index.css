@@ -1,0 +1,72 @@
+/* Новогодняя палитра: красный акцент, еловый зелёный, золото. Контраст текста — не ниже WCAG AA */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #fbf7f0;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f3ece0;
+  --color-text: #1d1b1a;
+  --color-text-muted: #6b6560;
+  --color-border: #e6dccb;
+  --color-heading: #1f6f43;
+  --color-accent: #b3261e;
+  --color-accent-hover: #8f1e18;
+  --color-on-accent: #ffffff;
+  --color-danger: #a4161a;
+  --color-gold: #c99a16;
+  /* Белый снег не виден на светлом фоне, поэтому снежинки голубоватые */
+  --color-snow: #a9c4dc;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #0f1d17;
+  --color-surface: #172a21;
+  --color-surface-hover: #1f3a2d;
+  --color-text: #f4efe6;
+  --color-text-muted: #a9b8ad;
+  --color-border: #2c4a3b;
+  --color-heading: #6fcf97;
+  --color-accent: #e5484d;
+  --color-accent-hover: #ee6b6f;
+  /* Тёмный текст на красном: с белым контраст ниже 4.5:1 */
+  --color-on-accent: #1a0f0f;
+  --color-danger: #ff8a80;
+  --color-gold: #f5c542;
+  --color-snow: #ffffff;
+}
+
+:root {
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', serif;
+  --radius: 8px;
+
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+h1,
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--color-heading);
+}

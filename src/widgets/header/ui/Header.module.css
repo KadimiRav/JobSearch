@@ -1,0 +1,43 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 32px 16px 16px;
+}
+
+/* Гирлянда: провод и четыре цвета лампочек, повторяющиеся по ширине экрана */
+.garland {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background:
+    radial-gradient(circle at 8px 12px, #e5484d 0 4px, transparent 5px) 0 0 / 64px 20px repeat-x,
+    radial-gradient(circle at 24px 14px, var(--color-gold) 0 4px, transparent 5px) 0 0 / 64px 20px repeat-x,
+    radial-gradient(circle at 40px 12px, #3fbf7f 0 4px, transparent 5px) 0 0 / 64px 20px repeat-x,
+    radial-gradient(circle at 56px 14px, #4da3ff 0 4px, transparent 5px) 0 0 / 64px 20px repeat-x,
+    linear-gradient(var(--color-border), var(--color-border)) 0 6px / 100% 2px no-repeat;
+  animation: twinkle 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from {
+    filter: brightness(0.85);
+  }
+  to {
+    filter: brightness(1.25) drop-shadow(0 0 3px rgb(255 220 120 / 0.6));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .garland {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 28px 12px 12px;
+  }
+}
